@@ -46,7 +46,7 @@ const Infographic = ({ age, studyTime, experience, aboutMe }) => {
 
 // Propriedades esperadas para o componente Infographic
 Infographic.propTypes = {
-  age: PropTypes.number.isRequired,
+  age: PropTypes.string.isRequired,
   studyTime: PropTypes.string.isRequired,
   experience: PropTypes.string.isRequired,
   aboutMe: PropTypes.string.isRequired,

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const ButtonStyled = styled.a`
   background-color: #b2c4d8; 
   text-align: center;
-  color: #fff; 
+  color: #463c3c; 
   padding: 10px 20px; 
   font-size: 16px; 
   border: none; 

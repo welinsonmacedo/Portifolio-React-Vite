@@ -34,7 +34,7 @@ const ProjectLink = styled.a`
 
 const ProjectImage = styled.img`
   width: 100%;
-  height: auto;
+  max-height:auto;
   border-radius: 5px;
   margin-bottom: 10px;
   &:hover {

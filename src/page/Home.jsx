@@ -68,9 +68,9 @@ const Home = () => {
       <ProfileImgComponent src='https://media.licdn.com/dms/image/D4D35AQGUHK4CX9jlvw/profile-framedphoto-shrink_200_200/0/1706706370051?e=1708866000&v=beta&t=TAc8mASi-K8Ca8w_wznnn532MWDS0ReIQHh1K8rSuTo' />
       <SocialLinks />
       <Infographic
-        age={25}
-        studyTime="5 anos"
-        experience="4 anos como desenvolvedor fullstack"
+        age='25 anos'
+        studyTime="4 anos"
+        experience="Desenvolvedor Free-lancer "
         aboutMe="Desenvolvedor Fullstack apaixonado por criar inovações digitais e resolver problemas complexos. Sempre buscando aprender e evoluir."
       />
       <Title>Desenvolvedor FullStack</Title>
