@@ -37,7 +37,7 @@ const Home = () => {
         'This is a multiplatform web android app: Financial control app Technologies: ReactNative | Expo | Firebase User Teste : test@gmail.com Senha:179300',
       link: 'https://wmcontrolefinanceiro1-0.netlify.app/',
       code: 'https://github.com/welinsonmacedo/React-Native-Financial-Control.git',
-      imageSrc: '../../public/REACT NATIVE CONTROLE FINANCEIRO.png',
+      imageSrc: 'REACT NATIVE CONTROLE FINANCEIRO.png',
       skillsText:'React Native | Expo | Firebase'
     },
     {
@@ -46,7 +46,7 @@ const Home = () => {
         'This Project was developed at Rocketseat-Challenge-Discover-2024',
       link: 'https://welinsonlinks.netlify.app/',
       code: 'https://github.com/welinsonmacedo/Rocketseat-Challenge-Discover-2024.git',
-      imageSrc: '../../public/Rocketseat-Challenge-Discover-2024.png',
+      imageSrc: 'Rocketseat-Challenge-Discover-2024.png',
       skillsText:'Html | Css | Java Script'
     },
     {
@@ -55,7 +55,7 @@ const Home = () => {
         'This Project Was Developed to train new Angualar skills',
       link: 'https://magenta-sprite-0d694d.netlify.app/',
       code: 'https://github.com/welinsonmacedo/-Angular-course-store.git',
-      imageSrc: '../../public/Angular Store.png',
+      imageSrc: 'Angular Store.png',
       skillsText:'Angular'
     },
   
