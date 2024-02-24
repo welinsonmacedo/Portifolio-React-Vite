@@ -23,9 +23,13 @@ const ProjectLink = styled.a`
   font-size: 14px;
   color: #ffffff;
   margin-top: 10px;
-  background-color: blue;
+  background-color: #047521;
   border-radius: 5px;
   padding: 5px;
+  &:hover {
+    background-color: #6eda8e;
+    color:black;
+    }
 `;
 
 const ProjectImage = styled.img`
@@ -33,10 +37,22 @@ const ProjectImage = styled.img`
   height: auto;
   border-radius: 5px;
   margin-bottom: 10px;
+  &:hover {
+    transform: scale(1.1); 
+   
+  }
 `;
+const Skills = styled.h4`
+color: #ffffff;
+background-color: gray;
+margin-top: 10px;
+padding: 5px;
+border-radius: 5px;
+
+`
 
 // Componente Project
-const Project = ({ title, description, link, code, imageSrc }) => {
+const Project = ({ title, description, link, code, imageSrc,skillsText }) => {
   return (
     <ProjectContainer>
       {imageSrc && <ProjectImage src={imageSrc} alt={title} />}
@@ -49,6 +65,7 @@ const Project = ({ title, description, link, code, imageSrc }) => {
       <ProjectLink href={code} target="_blank" rel="noopener noreferrer">
         Link para o GitHub
       </ProjectLink>
+      <Skills>{skillsText}</Skills>
     </ProjectContainer>
   );
 };
@@ -59,7 +76,8 @@ Project.propTypes = {
   description: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   code: PropTypes.string.isRequired,
-  imageSrc: PropTypes.string // A imagem é opcional
+  imageSrc: PropTypes.string ,
+  skillsText:PropTypes.string
 };
 
 export default Project;

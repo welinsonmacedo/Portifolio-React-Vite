@@ -2,8 +2,9 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const ButtonStyled = styled.button`
-  background-color: #007bff; 
+const ButtonStyled = styled.a`
+  background-color: #b2c4d8; 
+  text-align: center;
   color: #fff; 
   padding: 10px 20px; 
   font-size: 16px; 
@@ -16,7 +17,7 @@ const ButtonStyled = styled.button`
 
   
   &:hover {
-    background-color: #0056b3; 
+    background-color: #e1e2e4; 
   }
 
 
@@ -27,10 +28,10 @@ const ButtonStyled = styled.button`
 `;
 
 
-const Button = ({ children, onClick, disabled }) => {
+const Button = ({ children, onClick, disabled,link }) => {
   return (
-    <ButtonStyled onClick={onClick} disabled={disabled}>
-      {children}
+    <ButtonStyled onClick={onClick} disabled={disabled} href={link}>
+      {children} 
     </ButtonStyled>
   );
 };
@@ -38,6 +39,7 @@ Button.propTypes = {
     children: PropTypes.node.isRequired,
     onClick: PropTypes.func, 
     disabled: PropTypes.bool, 
+    link:PropTypes.string
   };
 
 export default Button;

@@ -45,6 +45,7 @@ const SkillBoard = () => {
     { name: 'ReactJS', level: 'Avançado' },
     { name: 'React Native', level: 'Intermediário' },
     { name: 'Next js', level: 'Intermediário' },
+    { name: 'Angular', level: 'Iniciante' },
     { name: 'Kotlin', level: 'Iniciante' },
     { name: 'FireBase', level: 'Intermediário' },
     { name: 'GitHub', level: 'Intermediário' },

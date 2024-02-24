@@ -4,6 +4,7 @@ import ProfileImgComponent from '../components/ProfileImgComponent';
 import SocialLinks from '../components/SocialLinks';
 import SkillBoard from '../components/SkillBoard';
 import Infographic from '../components/InfographicContainer'
+import Button from '../components/Button'
 const ContainerHome = styled.div`
   display: flex;
   flex-direction: column;
@@ -36,9 +37,28 @@ const Home = () => {
         'This is a multiplatform web android app: Financial control app Technologies: ReactNative | Expo | Firebase User Teste : test@gmail.com Senha:179300',
       link: 'https://wmcontrolefinanceiro1-0.netlify.app/',
       code: 'https://github.com/welinsonmacedo/React-Native-Financial-Control.git',
-      imageSrc: 'https://private-user-images.githubusercontent.com/98168234/303947870-faa39ee7-524e-421b-a083-ec0ee67aac88.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDgyNjM1OTQsIm5iZiI6MTcwODI2MzI5NCwicGF0aCI6Ii85ODE2ODIzNC8zMDM5NDc4NzAtZmFhMzllZTctNTI0ZS00MjFiLWEwODMtZWMwZWU2N2FhYzg4LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMTglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjE4VDEzMzQ1NFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTRjNzhiZDQ1YjFiMDE0NTBmM2M1MjdhOGEzOTZhNDQ0ZjBhYzE2ODhjYTU4Y2Q2ZGQwZjQ3MzlmMzlhN2YzNTMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.qMWk42HJmo9RHq1AIJefThRsWHN-3Hz6vKsGjTNIemU'
-    }
-
+      imageSrc: '../../public/REACT NATIVE CONTROLE FINANCEIRO.png',
+      skillsText:'React Native | Expo | Firebase'
+    },
+    {
+      title: 'Rocketseat-Challenge-Discover-2024',
+      description:
+        'This Project was developed at Rocketseat-Challenge-Discover-2024',
+      link: 'https://welinsonlinks.netlify.app/',
+      code: 'https://github.com/welinsonmacedo/Rocketseat-Challenge-Discover-2024.git',
+      imageSrc: '../../public/Rocketseat-Challenge-Discover-2024.png',
+      skillsText:'Html | Css | Java Script'
+    },
+    {
+      title: 'Angular-course-store',
+      description:
+        'This Project Was Developed to train new Angualar skills',
+      link: 'https://magenta-sprite-0d694d.netlify.app/',
+      code: 'https://github.com/welinsonmacedo/-Angular-course-store.git',
+      imageSrc: '../../public/Angular Store.png',
+      skillsText:'Angular'
+    },
+  
 
   ];
 
@@ -66,8 +86,10 @@ const Home = () => {
             link={project.link}
             code={project.code}
             imageSrc={project.imageSrc}
+            skillsText={project.skillsText}
           />
         ))}
+        <Button link='https://github.com/welinsonmacedo'> Ver Todos Projetos </Button>
       </ContainerProjects>
     </ContainerHome>
   );
