@@ -41,13 +41,13 @@ const Home = () => {
       skillsText:'React Native | Expo | Firebase'
     },
     {
-      title: 'Rocketseat-Challenge-Discover-2024',
+      title: 'Receiptproject',
       description:
-        'This Project was developed at Rocketseat-Challenge-Discover-2024',
-      link: 'https://welinsonlinks.netlify.app/',
-      code: 'https://github.com/welinsonmacedo/Rocketseat-Challenge-Discover-2024.git',
-      imageSrc: 'Rocketseat-Challenge-Discover-2024.png',
-      skillsText:'Html | Css | Java Script'
+        'project developing a web application that generates receipts for a client who works with transport and travel',
+      link: 'https://receiptproject.vercel.app/',
+      code: 'https://github.com/welinsonmacedo/receiptproject.git',
+      imageSrc: 'receipts.png',
+      skillsText:'Html | Css | Java Script |React|Firebase'
     },
     {
       title: 'Angular-course-store',
@@ -65,7 +65,7 @@ const Home = () => {
   return (
     <ContainerHome>
       <Title>Welinson</Title>
-      <ProfileImgComponent src='https://media.licdn.com/dms/image/D4D35AQGUHK4CX9jlvw/profile-framedphoto-shrink_200_200/0/1706706370051?e=1708866000&v=beta&t=TAc8mASi-K8Ca8w_wznnn532MWDS0ReIQHh1K8rSuTo' />
+      <ProfileImgComponent src='perfil.jpeg' />
       <SocialLinks />
       <Infographic
         age='25 anos'
