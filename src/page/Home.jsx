@@ -1,97 +1,60 @@
 import styled from 'styled-components';
-import Project from '../components/Project';
-import ProfileImgComponent from '../components/ProfileImgComponent';
-import SocialLinks from '../components/SocialLinks';
 import SkillBoard from '../components/SkillBoard';
-import Infographic from '../components/InfographicContainer'
-import Button from '../components/Button'
-const ContainerHome = styled.div`
+import ContainerHome from '../components/ContainerHome';
+import ContainerProjects from '../components/ContainerProjects';
+
+const Container = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 2rem;
-  width: 100%;
-  gap:20px;
+  justify-content: flex-start;
+  height: 100vh;
+  overflow-y: auto; 
+
+  /* Adiciona overflow-y auto para permitir rolagem vertical quando necessário */
 `;
 
+const AnimatedBackground = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(#ffffff, transparent 50%), 
+              radial-gradient(#000000, transparent 50%),
+              radial-gradient(#ff0000, transparent 50%);
+  background-size: 7px 7px;
+  z-index: -1;
+  animation: animateBackground 50s linear infinite;
 
-
-const Title = styled.h1`
-  color: #2c465e;
+  @keyframes animateBackground {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
 `;
 
-const ContainerProjects = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-  gap: 20px;
+const ContentContainer = styled.div`
+  position: relative;
+  z-index: 1;
   width: 100%;
-  max-width: 1200px;
+  padding: 2rem; /* Adicionei o padding novamente para manter o conteúdo afastado das bordas */
 `;
 
 const Home = () => {
-  const projects = [
-    {
-      title: 'React-Native-Financial-Control',
-      description:
-        'This is a multiplatform web android app: Financial control app Technologies: ReactNative | Expo | Firebase User Teste : test@gmail.com Senha:179300',
-      link: 'https://wmcontrolefinanceiro1-0.netlify.app/',
-      code: 'https://github.com/welinsonmacedo/React-Native-Financial-Control.git',
-      imageSrc: 'REACT NATIVE CONTROLE FINANCEIRO.png',
-      skillsText:'React Native | Expo | Firebase'
-    },
-    {
-      title: 'Receiptproject',
-      description:
-        'project developing a web application that generates receipts for a client who works with transport and travel',
-      link: 'https://receiptproject.vercel.app/',
-      code: 'https://github.com/welinsonmacedo/receiptproject.git',
-      imageSrc: 'receipts.png',
-      skillsText:'Html | Css | Java Script |React|Firebase'
-    },
-    {
-      title: 'Angular-course-store',
-      description:
-        'This Project Was Developed to train new Angualar skills',
-      link: 'https://magenta-sprite-0d694d.netlify.app/',
-      code: 'https://github.com/welinsonmacedo/-Angular-course-store.git',
-      imageSrc: 'Angular Store.png',
-      skillsText:'Angular'
-    },
-  
-
-  ];
-
   return (
-    <ContainerHome>
-      <Title>Welinson</Title>
-      <ProfileImgComponent src='perfil.jpeg' />
-      <SocialLinks />
-      <Infographic
-        age='25 anos'
-        studyTime="4 anos"
-        experience="Desenvolvedor Free-lancer "
-        aboutMe="Desenvolvedor Fullstack apaixonado por criar inovações digitais e resolver problemas complexos. Sempre buscando aprender e evoluir."
-      />
-      <Title>Desenvolvedor FullStack</Title>
-      <SkillBoard />
-      <h2>Meus Projetos</h2>
-      <ContainerProjects>
-
-        {projects.map((project, index) => (
-          <Project
-            key={index}
-            title={project.title}
-            description={project.description}
-            link={project.link}
-            code={project.code}
-            imageSrc={project.imageSrc}
-            skillsText={project.skillsText}
-          />
-        ))}
-        <Button link='https://github.com/welinsonmacedo'> Ver Todos Projetos </Button>
-      </ContainerProjects>
-    </ContainerHome>
+    <Container>
+      <AnimatedBackground />
+      <ContentContainer>
+        <ContainerHome />
+        <SkillBoard />
+        <ContainerProjects />
+      </ContentContainer>
+    </Container>
   );
 };
 

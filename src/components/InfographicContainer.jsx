@@ -24,22 +24,17 @@ const InfographicLabel = styled.span`
 `;
 
 // Componente Infographic
-const Infographic = ({ age, studyTime, experience, aboutMe }) => {
+const Infographic = ({ age, studyTime }) => {
   return (
     <InfographicContainer>
-      <InfographicTitle>Informações</InfographicTitle>
+      <InfographicTitle>--------</InfographicTitle>
       <InfographicItem>
         <InfographicLabel>Idade:</InfographicLabel> {age}
       </InfographicItem>
       <InfographicItem>
         <InfographicLabel>Tempo de Estudo:</InfographicLabel> {studyTime}
       </InfographicItem>
-      <InfographicItem>
-        <InfographicLabel>Experiência:</InfographicLabel> {experience}
-      </InfographicItem>
-      <InfographicItem>
-        <InfographicLabel>Sobre Mim:</InfographicLabel> {aboutMe}
-      </InfographicItem>
+    
     </InfographicContainer>
   );
 };
@@ -48,8 +43,7 @@ const Infographic = ({ age, studyTime, experience, aboutMe }) => {
 Infographic.propTypes = {
   age: PropTypes.string.isRequired,
   studyTime: PropTypes.string.isRequired,
-  experience: PropTypes.string.isRequired,
-  aboutMe: PropTypes.string.isRequired,
+
 };
 
 export default Infographic;

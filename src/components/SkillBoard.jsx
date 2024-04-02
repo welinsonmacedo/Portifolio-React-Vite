@@ -1,39 +1,42 @@
-
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 // Estilizando o quadro de habilidades
 const SkillBoardContainer = styled.div`
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 20px;
+  padding: 20px;
 `;
 
 const Skills = styled.div`
-margin-top: 3rem;
-width: 100%;
-`
+  margin-top: 3rem;
+  width: 100%;
+`;
 
 const SkillItem = styled.div`
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 `;
 
 const SkillName = styled.h3`
-  font-size: 16px;
+  font-size: 18px;
+  color: #2c3e50;
   margin: 0;
 `;
 
 const SkillLevel = styled.span`
   font-size: 14px;
-  color: #666;
+  color: #555;
 `;
+
 const Title = styled.h2`
-text-align: center;
-color: #666;
-`
+  text-align: center;
+  color: #2c3e50;
+`;
+
 // Componente SkillBoard
 const SkillBoard = () => {
   const skills = [
@@ -41,26 +44,23 @@ const SkillBoard = () => {
     { name: 'CSS', level: 'Avançado'},
     { name: 'JavaScript', level: 'Avançado' },
     { name: 'TypeScript', level: 'Intermediário' },
-    { name: 'Node js', level: 'Intermediário' },
+    { name: 'Node.js', level: 'Intermediário' },
     { name: 'ReactJS', level: 'Avançado' },
     { name: 'React Native', level: 'Intermediário' },
-    { name: 'Next js', level: 'Intermediário' },
+    { name: 'Next.js', level: 'Intermediário' },
     { name: 'Angular', level: 'Iniciante' },
     { name: 'Kotlin', level: 'Iniciante' },
-    { name: 'FireBase', level: 'Intermediário' },
+    { name: 'Firebase', level: 'Intermediário' },
     { name: 'GitHub', level: 'Intermediário' },
+    { name: 'Git', level: 'Intermediário' },
     { name: 'Figma', level: 'Intermediário' },
-  
- 
-  
-  
-
+    { name: 'Scrum', level: 'Intermediário' },
   ];
+
   return (
     <Skills>
-    <Title>Skills</Title>
+      <Title>Skills</Title>
       <SkillBoardContainer>
-        
         {skills.map((skill, index) => (
           <SkillItem key={index}>
             <SkillName>{skill.name}</SkillName>
@@ -69,11 +69,8 @@ const SkillBoard = () => {
         ))}
       </SkillBoardContainer>
     </Skills>
-    
-   
   );
 };
-
 
 SkillBoard.propTypes = {
   skills: PropTypes.arrayOf(
